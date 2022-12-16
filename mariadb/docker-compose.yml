@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    volumes:
+      - /Users/lullaby/workspace/docker/mariadb/volume:/var/lib/mysql
+      - /Users/lullaby/workspace/docker/mariadb/volume:/etc/mysql/conf.d
+    ports:
+      - 3306:3306
